@@ -1,1 +1,96 @@
+:root{
+	--bg:#0f1724;
+	--card:#0b1220;
+ 	--muted:#9aa4b2;
+ 	--accent:#ff6b6b; /* coral */
+ 	--accent-2:#6366f1; /* indigo */
+	--text:#e6eef6;
+	--glass: rgba(255,255,255,0.03);
+	--radius:12px;
+	--max-width:1100px;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071025);color:var(--text);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+
+.container{width:90%;max-width:var(--max-width);margin:0 auto}
+
+/* Header */
+.site-header{backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{font-weight:700;color:var(--text);font-size:1.1rem}
+.main-nav a{margin-left:18px;color:var(--muted)}
+.main-nav a.cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#042029;padding:8px 12px;border-radius:8px;font-weight:600}
+
+/* Hero */
+.hero{padding:48px 0}
+.hero-inner{display:flex;align-items:center;justify-content:center}
+.hero-card{background:var(--card);padding:34px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6);text-align:center;max-width:900px}
+.avatar{width:140px;height:140px;border-radius:50%;display:inline-block;object-fit:cover;border:3px solid rgba(255,255,255,0.06);box-shadow:0 10px 30px rgba(99,102,241,0.18);margin-bottom:16px}
+.lead{color:var(--muted);max-width:70%;margin:0 auto}
+.actions{margin-top:18px}
+.btn{background:var(--accent);color:#042029;padding:10px 16px;border-radius:10px;font-weight:600;margin-right:8px}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+/* Sections */
+.section{padding:44px 0}
+.section.alt{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+h2{margin-top:0}
+.muted{color:var(--muted)}
+.muted-sm{color:var(--muted);font-size:0.9rem}
+
+.grid{display:grid;gap:16px}
+.skills-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.hobbies-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.projects-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+/* Guia do portfólio */
+.guia-section{padding-top:28px;padding-bottom:28px}
+.guide-list{display:grid;gap:12px;margin:18px 0;padding:0;list-style:none}
+.guide-item{display:flex;align-items:flex-start;gap:14px;padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-left:4px solid var(--accent);border-radius:10px;transition:transform .18s ease,box-shadow .18s ease}
+.guide-item:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,6,23,0.45)}
+.emoji{width:52px;height:52px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 18px rgba(99,102,241,0.15);color:#fff}
+.guide-content h3{margin:0 0 6px 0;font-size:1.05rem}
+.guide-content p{margin:0;color:var(--muted);line-height:1.4}
+
+@media (max-width:700px){
+	.guide-item{flex-direction:row;align-items:center}
+	.emoji{width:48px;height:48px}
+}
+
+.card{background:var(--glass);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.project{display:block;padding:20px}
+
+/* imagens dentro de cards (hobbies/projetos) */
+.card img{width:100%;height:370px;object-fit:cover;border-radius:8px;margin-top:12px;border:1px solid rgba(255,255,255,0.03)}
+
+@media (max-width:520px){
+	.card img{height:160px}
+}
+
+.contact-list{list-style:none;padding:0;margin:0}
+.contact-list li{margin-bottom:8px}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:20px 0;margin-top:36px}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+/* Responsive */
+@media (max-width:900px){
+	.lead{max-width:100%}
+	.hero-card{padding:22px}
+	.footer-inner{flex-direction:column;align-items:flex-start}
+	.main-nav{display:none}
+}
+
+@media (max-width:520px){
+	.avatar{width:110px;height:110px}
+	.hero{padding:28px 0}
+}
+
+/* Small helpers */
+.muted-sm{opacity:0.8}
+
 
